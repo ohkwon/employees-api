@@ -9,7 +9,10 @@ class EmployeesController < ApplicationController
     render json: @employee
   end
 
-  def destroy
-    render json: {message: "destroyed"}
+  def create
+    @employee = Employee.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], birthdate: params[:birthdate], ssn: params[:ssn])
+    @employee.save
+    render :show
   end
+
 end

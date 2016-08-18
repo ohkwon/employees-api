@@ -1,4 +1,4 @@
-class EmployeesController < ApplicationController
+class Api::V1::EmployeesController < ApplicationController
 
   def index
     @employees = Employee.all
@@ -26,7 +26,5 @@ class EmployeesController < ApplicationController
     @employee = Employee.find_by(id: params[:id])
     @employee.destroy
     render json: {message: "Employee FIRED!!!!!"}
-    
   end
-
 end

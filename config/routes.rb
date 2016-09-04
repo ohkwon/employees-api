@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get "/", to: 'employees#index'
+
   namespace :api do
     namespace :v1 do
       get '/employees', to: 'employees#index'

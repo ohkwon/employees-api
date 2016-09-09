@@ -11,10 +11,13 @@
       });
     }
 
-
-
-
-
+    $scope.toggleOrder = function(attribute) {
+      if ($scope.orderAttribute == attribute) {
+        $scope.descending = !$scope.descending;
+      } else {
+        $scope.orderAttribute = attribute;
+      }
+    }
 
     window.$scope = $scope;
   });

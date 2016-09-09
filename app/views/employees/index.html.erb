@@ -7,7 +7,7 @@
         <th ng-click="toggleOrder('first_name')">First Name</th>
         <th ng-click="toggleOrder('last_name')">Last Name</th>
       </tr>
-      <tr ng-repeat="employee in employees | suspicious | orderBy: orderAttribute:descending ">
+      <tr ng-repeat="employee in employees | suspicious : age | orderBy: orderAttribute:descending ">
         <td>{{employee.first_name}}</td>
         <td>{{employee.last_name}}</td>
       </tr>
